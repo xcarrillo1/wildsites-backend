@@ -14,3 +14,12 @@
 #       methods: [:get, :post, :put, :patch, :delete, :options, :head]
 #   end
 # end
+
+...
+allow do
+  origins 'https://shielded-depths-16896.herokuapp.com/animals'
+  resource ‘*’,
+    headers: :any,
+    methods: [:get, :post, :put, :patch, :delete, :options, :head]
+end
+...
