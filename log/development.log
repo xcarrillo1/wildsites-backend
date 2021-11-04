@@ -15,3 +15,103 @@ Migrating to CreateAnimals (20211104185559)
   [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3046397844150113145)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-11-04 14:06:20 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1287)
+
+
+  
+ActionController::RequestForgeryProtection::DisabledSessionError (Request forgery protection requires a working session store but your application has sessions disabled. You need to either disable request forgery protection, or configure a working session store.):
+  
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:483:in `ensure_session_is_enabled!'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:472:in `protect_against_forgery?'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:321:in `verified_request?'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:252:in `verify_authenticity_token'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:415:in `block in make_lambda'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.0.alpha2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `block in invoke_before'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `each'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `invoke_before'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/abstract_controller/callbacks.rb:220:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/instrumentation.rb:65:in `block in process_action'
+activesupport (7.0.0.alpha2) lib/active_support/notifications.rb:207:in `block in instrument'
+activesupport (7.0.0.alpha2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.0.alpha2) lib/active_support/notifications.rb:207:in `instrument'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/instrumentation.rb:64:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+activerecord (7.0.0.alpha2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.0.alpha2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.0.alpha2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.0.alpha2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:845:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0.alpha2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/host_authorization.rb:96:in `call'
+railties (7.0.0.alpha2) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/animals" for ::1 at 2021-11-04 15:16:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.7ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 0.7ms | Allocations: 15423)
+
+
+Started GET "/animals" for ::1 at 2021-11-04 15:28:09 -0500
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.3ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 4.3ms | Allocations: 2855)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-11-04 15:28:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/animals" for ::1 at 2021-11-04 15:28:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.4ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 15385)
+
+
