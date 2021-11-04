@@ -15,11 +15,12 @@
 #   end
 # end
 
-...
-allow do
-  origins 'https://shielded-depths-16896.herokuapp.com/animals'
-  resource ‘*’,
-    headers: :any,
-    methods: [:get, :post, :put, :patch, :delete, :options, :head]
-end
-...
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins '*'
+  
+      resource '*',
+        headers: :any,
+        methods: [:get, :post, :put, :patch, :delete, :options, :head]
+    end
+  end
