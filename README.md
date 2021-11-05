@@ -1,9 +1,13 @@
-# README
+# App Name - Project 4
 
-Bobbys
+Developers: Bobby S., Marlon S., Rodrigo B., Xavier C.
 
-Marlon
+## Description 
+This is the backend code of our APP NAME app. It runs on Ruby on rails. The backend is delopyed on Heroku. You can checkout the app's frontent code [here](https://github.com/xcarrillo1/frontend-project4)!
 
-Rodrigo
-
-Xavier
+## Technologies Used
+- Ruby on Rails
+- Heroku
+- Postman
+- PostgreSQL
+- Postico
