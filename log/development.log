@@ -115,3 +115,233 @@ Processing by AnimalsController#index as HTML
 Completed 200 OK in 13ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 15385)
 
 
+Started GET "/" for ::1 at 2021-11-04 16:06:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 13921)
+
+
+Started GET "/animals" for ::1 at 2021-11-04 16:06:54 -0500
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.4ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 1757)
+
+
+Started POST "/animals" for ::1 at 2021-11-05 09:07:21 -0500
+  
+ActiveRecord::ConnectionNotEstablished (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+):
+  
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:643:in `public_send'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:643:in `new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:687:in `checkout_new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:666:in `try_to_checkout_new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:627:in `acquire_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:328:in `checkout'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:168:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_handling.rb:309:in `retrieve_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_handling.rb:265:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0.alpha2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/host_authorization.rb:96:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.0.alpha2) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/animals" for ::1 at 2021-11-05 09:08:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimalsController#create as */*
+  Parameters: {"book"=>{"titlee"=>"The Woman in the Window", "author"=>"A. J. Finnnnnnn", "genre"=>"Thriller/Psychological Horror", "publisher"=>"None", "publish_date"=>"Jan 2, 2019"}}
+Completed 400 Bad Request in 13ms (ActiveRecord: 0.0ms | Allocations: 16572)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: animal):
+  
+app/controllers/animals_controller.rb:49:in `animal_params'
+app/controllers/animals_controller.rb:18:in `create'
+Started GET "/animals" for ::1 at 2021-11-05 09:08:33 -0500
+Processing by AnimalsController#index as */*
+  Parameters: {"book"=>{"titlee"=>"The Woman in the Window", "author"=>"A. J. Finnnnnnn", "genre"=>"Thriller/Psychological Horror", "publisher"=>"None", "publish_date"=>"Jan 2, 2019"}}
+  [1m[36mAnimal Load (2.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 2.1ms | Allocations: 1217)
+
+
+Started POST "/animals" for ::1 at 2021-11-05 09:09:03 -0500
+Processing by AnimalsController#create as */*
+  Parameters: {"animal"=>{"name"=>"Tiger"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/animals_controller.rb:20:in `create'
+  [1m[36mAnimal Create (1.7ms)[0m  [1m[32mINSERT INTO "animals" ("image", "name", "action", "type", "temp", "location") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image", nil], ["name", "Tiger"], ["action", nil], ["type", nil], ["temp", nil], ["location", nil]]
+  ↳ app/controllers/animals_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/animals_controller.rb:20:in `create'
+Completed 201 Created in 16ms (Views: 0.4ms | ActiveRecord: 7.6ms | Allocations: 7884)
+
+
+Started GET "/animals" for ::1 at 2021-11-05 09:09:09 -0500
+Processing by AnimalsController#index as */*
+  Parameters: {"animal"=>{"name"=>"Tiger"}}
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 798)
+
+
+Started POST "/animals" for ::1 at 2021-11-05 09:11:09 -0500
+Processing by AnimalsController#create as */*
+  Parameters: {"animal"=>{"image"=>"https://images.unsplash.com/photo-1561731216-c3a4d99437d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80", "name"=>"Tiger", "action"=>"Poop yourself"}, "Temp"=>"Aggressive", "Location"=>"Siberian taiga"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/animals_controller.rb:20:in `create'
+  [1m[36mAnimal Create (0.2ms)[0m  [1m[32mINSERT INTO "animals" ("image", "name", "action", "type", "temp", "location") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image", "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"], ["name", "Tiger"], ["action", "Poop yourself"], ["type", nil], ["temp", nil], ["location", nil]]
+  ↳ app/controllers/animals_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/animals_controller.rb:20:in `create'
+Completed 201 Created in 6ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 1883)
+
+
+Started POST "/animals" for ::1 at 2021-11-05 09:11:36 -0500
+Processing by AnimalsController#create as */*
+  Parameters: {"animal"=>{"image"=>"https://images.unsplash.com/photo-1561731216-c3a4d99437d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80", "name"=>"Tiger", "action"=>"Poop yourself", "temp"=>"Aggressive", "location"=>"Siberian taiga"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/animals_controller.rb:20:in `create'
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("image", "name", "action", "type", "temp", "location") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image", "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"], ["name", "Tiger"], ["action", "Poop yourself"], ["type", nil], ["temp", "Aggressive"], ["location", "Siberian taiga"]]
+  ↳ app/controllers/animals_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/animals_controller.rb:20:in `create'
+Completed 201 Created in 6ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 1890)
+
+
+Started GET "/" for ::1 at 2021-11-05 09:14:11 -0500
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 216)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-11-05 09:14:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/animals" for ::1 at 2021-11-05 09:14:17 -0500
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1039)
+
+
+Started DELETE "/animals/1" for ::1 at 2021-11-05 09:16:53 -0500
+Processing by AnimalsController#destroy as */*
+  Parameters: {"animal"=>{"image"=>"https://images.unsplash.com/photo-1561731216-c3a4d99437d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80", "name"=>"Tiger", "action"=>"Poop yourself", "temp"=>"Aggressive", "location"=>"Siberian taiga"}, "id"=>"1"}
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:44:in `set_animal'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/animals_controller.rb:38:in `destroy'
+  [1m[36mAnimal Destroy (0.3ms)[0m  [1m[31mDELETE FROM "animals" WHERE "animals"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/animals_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/animals_controller.rb:38:in `destroy'
+Completed 204 No Content in 11ms (ActiveRecord: 2.9ms | Allocations: 4068)
+
+
+Started DELETE "/animals/2" for ::1 at 2021-11-05 09:16:57 -0500
+Processing by AnimalsController#destroy as */*
+  Parameters: {"animal"=>{"image"=>"https://images.unsplash.com/photo-1561731216-c3a4d99437d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80", "name"=>"Tiger", "action"=>"Poop yourself", "temp"=>"Aggressive", "location"=>"Siberian taiga"}, "id"=>"2"}
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:44:in `set_animal'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/animals_controller.rb:38:in `destroy'
+  [1m[36mAnimal Destroy (0.2ms)[0m  [1m[31mDELETE FROM "animals" WHERE "animals"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/animals_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/animals_controller.rb:38:in `destroy'
+Completed 204 No Content in 8ms (ActiveRecord: 4.9ms | Allocations: 1744)
+
+
+Started GET "/animals" for ::1 at 2021-11-05 09:17:01 -0500
+Processing by AnimalsController#index as */*
+  Parameters: {"animal"=>{"image"=>"https://images.unsplash.com/photo-1561731216-c3a4d99437d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80", "name"=>"Tiger", "action"=>"Poop yourself", "temp"=>"Aggressive", "location"=>"Siberian taiga"}}
+  [1m[36mAnimal Load (0.3ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 805)
+
+
+Started GET "/animals" for ::1 at 2021-11-05 09:17:04 -0500
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 758)
+
+
+Started POST "/animals" for ::1 at 2021-11-05 09:18:47 -0500
+Processing by AnimalsController#create as */*
+  Parameters: {"animal"=>{"image"=>"https://d.newsweek.com/en/full/1843162/close-eastern-gray-squirrel.jpg?w=1600&h=1200&q=88&f=7d7497f90b5a295b798e4e545c25bd70", "name"=>"Squirrel", "action"=>"Watch from a distance", "temp"=>"Shy", "location"=>"Woods"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/animals_controller.rb:20:in `create'
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("image", "name", "action", "type", "temp", "location") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image", "https://d.newsweek.com/en/full/1843162/close-eastern-gray-squirrel.jpg?w=1600&h=1200&q=88&f=7d7497f90b5a295b798e4e545c25bd70"], ["name", "Squirrel"], ["action", "Watch from a distance"], ["type", nil], ["temp", "Shy"], ["location", "Woods"]]
+  ↳ app/controllers/animals_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/animals_controller.rb:20:in `create'
+Completed 201 Created in 5ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 1943)
+
+
+Started GET "/animals" for 127.0.0.1 at 2021-11-05 09:59:49 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.4ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 5.3ms | ActiveRecord: 2.3ms | Allocations: 20909)
+
+
+Started POST "/animals" for ::1 at 2021-11-05 10:00:03 -0500
+Processing by AnimalsController#create as */*
+  Parameters: {"animal"=>{"image"=>"https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2NvcmFsLXNuYWtlLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODI4fX19", "name"=>"Coral Snake", "action"=>"Although they seem docile, do not approach. They can turn on you quickly, and deliver a harsh bite, not letting go until they've delivered their venom.", "type"=>"Carnivore", "temp"=>"Passive", "location"=>"Woods"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 362)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'Carnivore'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Animal.inheritance_column to use another column for that information.):
+  
+app/controllers/animals_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3046397844150113145)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to FixTypeColumnToDiet (20211105150337)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "animals" RENAME COLUMN "type" TO "diet"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211105150337"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3046397844150113145)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
