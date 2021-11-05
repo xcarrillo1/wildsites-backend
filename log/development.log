@@ -317,3 +317,31 @@ Processing by AnimalsController#create as */*
 Completed 201 Created in 5ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 1943)
 
 
+Started GET "/animals" for 127.0.0.1 at 2021-11-05 09:59:49 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.4ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 5.3ms | ActiveRecord: 2.3ms | Allocations: 20909)
+
+
+Started POST "/animals" for ::1 at 2021-11-05 10:00:03 -0500
+Processing by AnimalsController#create as */*
+  Parameters: {"animal"=>{"image"=>"https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2NvcmFsLXNuYWtlLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODI4fX19", "name"=>"Coral Snake", "action"=>"Although they seem docile, do not approach. They can turn on you quickly, and deliver a harsh bite, not letting go until they've delivered their venom.", "type"=>"Carnivore", "temp"=>"Passive", "location"=>"Woods"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 362)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'Carnivore'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Animal.inheritance_column to use another column for that information.):
+  
+app/controllers/animals_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3046397844150113145)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to FixTypeColumnToDiet (20211105150337)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "animals" RENAME COLUMN "type" TO "diet"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211105150337"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3046397844150113145)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
