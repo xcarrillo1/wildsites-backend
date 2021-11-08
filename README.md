@@ -3,7 +3,7 @@
 Developers: Bobby S., Marlon S., Rodrigo B., Xavier C.
 
 ## Description 
-This is the backend code of our WildSites app. It runs on Ruby on rails. The backend is deployed on Heroku. You can checkout the app's frontent code [here](https://github.com/xcarrillo1/frontend-project4)!
+This is the backend code of our WildSites app. It runs on Ruby on rails. The backend is deployed on Heroku. You can checkout the app's frontend code [here](https://github.com/xcarrillo1/frontend-project4)!
 
 ## Technologies Used
 - Ruby on Rails
